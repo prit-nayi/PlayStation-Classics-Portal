@@ -1,20 +1,10 @@
-# 🎮 PlayStation Hub - Ultimate Gaming Experience
+# 🎮PlayStation-Classics-Portal - Ultimate Gaming Experience
 
-<div align="center">
 
-![PlayStation Hub](https://img.shields.io/badge/PlayStation-Hub-00d4ff?style=for-the-badge&logo=playstation&logoColor=white)
-![Games](https://img.shields.io/badge/Games-4%20Available-4CAF50?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Live%20%26%20Active-27ae60?style=for-the-badge)
-
-**🎯 Your Gateway to Classic Gaming Nostalgia**
-
-[![Play Now](https://img.shields.io/badge/Play%20Now-Start%20Gaming-ff6b6b?style=for-the-badge&logo=gamepad-2)](https://your-playstation-hub-url.com)
-
-</div>
 
 ---
 
-## 🌟 **Welcome to PlayStation Hub**
+## 🌟 **Welcome to PlayStation-Classics-Portal**
 
 Step into a world where classic gaming meets modern web technology! Our PlayStation Hub is your ultimate destination for timeless games that have captivated players for generations. Experience the perfect blend of nostalgia and innovation with our carefully crafted gaming collection.
 
@@ -340,26 +330,12 @@ We welcome contributions to make PlayStation Hub even better!
 4. **🔧 Bug Fixes**: Report and fix issues
 5. **📚 Documentation**: Improve documentation
 
-### **🚀 Development Setup**
-```bash
-# Clone the repository
-git clone https://github.com/your-username/playstation-hub.git
 
-# Navigate to the project
-cd playstation-hub
-
-# Open in your favorite editor
-code .
-
-# Start local development server
-python -m http.server 8000
 ```
 
 ---
 
-## 📄 **License**
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -373,26 +349,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 📞 **Support & Contact**
 
-### **🎮 Need Help?**
-- **📧 Email**: support@playstation-hub.com
-- **🐛 Bug Reports**: GitHub Issues
-- **💡 Feature Requests**: GitHub Discussions
-- **📚 Documentation**: Wiki pages
-
-### **🌐 Connect With Us**
-- **🌍 Website**: [playstation-hub.com](https://playstation-hub.com)
-- **📱 Twitter**: [@PlayStationHub](https://twitter.com/PlayStationHub)
-- **📺 YouTube**: [PlayStation Hub Channel](https://youtube.com/playstationhub)
-- **💬 Discord**: [Join our community](https://discord.gg/playstationhub)
 
 ---
 
 <div align="center">
 
-**🎮 Ready to Start Gaming?**  
-[Play Now](https://your-playstation-hub-url.com) | [View Source](https://github.com/your-username/playstation-hub)
+
 
 ---
 
