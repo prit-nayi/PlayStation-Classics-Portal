@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Rock Paper Scissors Battle</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Back to Dashboard Button -->
+    <div class="back-to-dashboard">
+        <button class="dashboard-btn" onclick="window.location.href='../index.html'">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Dashboard</span>
+        </button>
+    </div>
+
+    <div class="game-container">
+        <!-- Header Section -->
+        <header class="game-header">
+            <h1 class="game-title">
+                <i class="fas fa-fist-raised"></i>
+                EPIC RPS BATTLE
+                <i class="fas fa-hand-scissors"></i>
+            </h1>
+            <div class="game-stats"> 
+                <div class="stat-item">
+                    <span class="stat-label">WINS</span>
+                    <span class="stat-value" id="wins">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">LOSSES</span>
+                    <span class="stat-value" id="losses">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">TIES</span>
+                    <span class="stat-value" id="ties">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">STREAK</span>
+                    <span class="stat-value" id="streak">0</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Battle Arena -->
+        <div class="battle-arena">
+            <!-- Player Side -->
+            <div class="player-side">
+                <h2 class="player-title">YOU</h2>
+                <div class="choice-display" id="playerChoice">
+                    <div class="choice-placeholder">
+                        <i class="fas fa-question"></i>
+                    </div>
+                </div>
+                <div class="player-score">
+                    <span class="score-label">Score</span>
+                    <span class="score-value" id="playerScore">0</span>
+                </div>
+            </div>
+
+            <!-- VS Section -->
+            <div class="vs-section">
+                <div class="vs-text">VS</div>
+                <div class="battle-status" id="battleStatus">Choose your weapon!</div>
+                <div class="round-counter">
+                    <span class="round-label">ROUND</span>
+                    <span class="round-number" id="roundNumber">1</span>
+                </div>
+            </div>
+
+            <!-- Computer Side -->
+            <div class="computer-side">
+                <h2 class="computer-title">CPU</h2>
+                <div class="choice-display" id="computerChoice">
+                    <div class="choice-placeholder">
+                        <i class="fas fa-question"></i>
+                    </div>
+                </div>
+                <div class="computer-score">
+                    <span class="score-label">Score</span>
+                    <span class="score-value" id="computerScore">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Weapon Selection -->
+        <div class="weapon-selection">
+            <h3 class="selection-title">Choose Your Weapon</h3>
+            <div class="weapons">
+                <button class="weapon-btn rock" onclick="play('rock')" data-weapon="rock">
+                    <div class="weapon-icon">🪨</div>
+                    <div class="weapon-name">ROCK</div>
+                    <div class="weapon-desc">Smashes Scissors</div>
+                </button>
+                <button class="weapon-btn paper" onclick="play('paper')" data-weapon="paper">
+                    <div class="weapon-icon">📄</div>
+                    <div class="weapon-name">PAPER</div>
+                    <div class="weapon-desc">Wraps Rock</div>
+                </button>
+                <button class="weapon-btn scissors" onclick="play('scissors')" data-weapon="scissors">
+                    <div class="weapon-icon">✂️</div>
+                    <div class="weapon-name">SCISSORS</div>
+                    <div class="weapon-desc">Cuts Paper</div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Game Controls -->
+        <div class="game-controls">
+            <button class="control-btn reset-btn" onclick="resetGame()">
+                <i class="fas fa-redo"></i>
+                RESET GAME
+            </button>
+            <button class="control-btn auto-play-btn" onclick="toggleAutoPlay()">
+                <i class="fas fa-play"></i>
+                <span id="autoPlayText">AUTO PLAY</span>
+            </button>
+        </div>
+
+        <!-- Result Display -->
+        <div class="result-display" id="resultDisplay">
+            <div class="result-content">
+                <div class="result-icon" id="resultIcon">🎯</div>
+                <div class="result-text" id="resultText">Ready to battle!</div>
+                <div class="result-animation" id="resultAnimation"></div>
+            </div>
+        </div>
+
+        <!-- Battle History -->
+        <div class="battle-history">
+            <h3 class="history-title">Battle History</h3>
+            <div class="history-list" id="historyList">
+                <!-- Battle history items will be added here -->
+            </div>
+        </div>
+
+        <!-- How to Play Section -->
+        <div class="how-to-play">
+            <h3 class="instructions-title">How to Play</h3>
+            
+            <div class="game-rules">
+                <h4>Game Rules:</h4>
+                <ul>
+                    <li><strong>Rock</strong> beats Scissors (Rock smashes Scissors)</li>
+                    <li><strong>Paper</strong> beats Rock (Paper wraps Rock)</li>
+                    <li><strong>Scissors</strong> beats Paper (Scissors cuts Paper)</li>
+                    <li>Same choices result in a tie</li>
+                </ul>
+            </div>
+            
+            <div class="controls-guide">
+                <h4>Controls & Buttons:</h4>
+                <div class="control-item">
+                    <span class="control-name">🪨 ROCK</span>
+                    <span class="control-desc">Choose rock to smash scissors</span>
+                </div>
+                <div class="control-item">
+                    <span class="control-name">📄 PAPER</span>
+                    <span class="control-desc">Choose paper to wrap rock</span>
+                </div>
+                <div class="control-item">
+                    <span class="control-name">✂️ SCISSORS</span>
+                    <span class="control-desc">Choose scissors to cut paper</span>
+                </div>
+                <div class="control-item">
+                    <span class="control-name">RESET</span>
+                    <span class="control-desc">Clear all scores and start fresh</span>
+                </div>
+                <div class="control-item">
+                    <span class="control-name">AUTO PLAY</span>
+                    <span class="control-desc">Watch AI vs AI battles automatically</span>
+                </div>
+            </div>
+            
+            <div class="game-tips">
+                <h4>Tips for Victory:</h4>
+                <ul>
+                    <li>Watch the AI's patterns to predict their next move</li>
+                    <li>Don't be too predictable - mix up your choices</li>
+                    <li>Use the battle history to analyze your performance</li>
+                    <li>Try to build winning streaks for higher scores</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="rockSound" preload="auto"></audio>
+    <audio id="paperSound" preload="auto"></audio>
+    <audio id="scissorsSound" preload="auto"></audio>
+    <audio id="winSound" preload="auto"></audio>
+    <audio id="loseSound" preload="auto"></audio>
+    <audio id="tieSound" preload="auto"></audio>
+    <audio id="battleSound" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayStation Gaming Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-gamepad"></i>
+                <span>PlayStation Hub</span>
+            </div>
+                            <div class="header-stats">
+                    <div class="stat">
+                        <i class="fas fa-users"></i>
+                        <span>4 Games Available</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-trophy"></i>
+                        <span>High Scores</span>
+                    </div>
+                </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="hero-section">
+                <h1 class="hero-title">Welcome to PlayStation Hub</h1>
+                <p class="hero-subtitle">Choose your game and start playing!</p>
+            </div>
+
+                            <!-- Games Grid -->
+                <div class="games-grid">
+                    <!-- Simon Game Card -->
+                    <div class="game-card" onclick="navigateToGame('simon')">
+                        <div class="game-card-header">
+                            <div class="game-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="game-badge">Memory</div>
+                        </div>
+                        <div class="game-card-content">
+                            <h3 class="game-title">Simon Game</h3>
+                            <p class="game-description">Test your memory with the classic Simon pattern game. Follow the sequence and see how far you can go!</p>
+                            <div class="game-features">
+                                <span class="feature"><i class="fas fa-lightbulb"></i> Memory Test</span>
+                                <span class="feature"><i class="fas fa-music"></i> Sound Effects</span>
+                                <span class="feature"><i class="fas fa-chart-line"></i> Progressive Difficulty</span>
+                            </div>
+                        </div>
+                        <div class="game-card-footer">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                                Play Now
+                            </button>
+                            <div class="game-stats">
+                                <span><i class="fas fa-star"></i> 4.8/5</span>
+                                <span><i class="fas fa-users"></i> 1.2k plays</span>
+                            </div>
+                        </div>
+                        <div class="game-card-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Click to Play</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RPS Game Card -->
+                    <div class="game-card" onclick="navigateToGame('rps')">
+                        <div class="game-card-header">
+                            <div class="game-icon">
+                                <i class="fas fa-hand-rock"></i>
+                            </div>
+                            <div class="game-badge">Strategy</div>
+                        </div>
+                        <div class="game-card-content">
+                            <h3 class="game-title">Rock Paper Scissors</h3>
+                            <p class="game-description">Epic battles await! Challenge the AI in this enhanced version of the classic game with stunning visuals.</p>
+                            <div class="game-features">
+                                <span class="feature"><i class="fas fa-robot"></i> AI Opponent</span>
+                                <span class="feature"><i class="fas fa-fire"></i> Epic Battles</span>
+                                <span class="feature"><i class="fas fa-trophy"></i> Win Streaks</span>
+                            </div>
+                        </div>
+                        <div class="game-card-footer">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                                Play Now
+                            </button>
+                            <div class="game-stats">
+                                <span><i class="fas fa-star"></i> 4.9/5</span>
+                                <span><i class="fas fa-users"></i> 2.1k plays</span>
+                            </div>
+                        </div>
+                        <div class="game-card-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Click to Play</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tic Tac Toe Game Card -->
+                    <div class="game-card" onclick="navigateToGame('tictactoe')">
+                        <div class="game-card-header">
+                            <div class="game-icon">
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <div class="game-badge">Strategy</div>
+                        </div>
+                        <div class="game-card-content">
+                            <h3 class="game-title">Tic Tac Toe</h3>
+                            <p class="game-description">Classic strategy game with AI opponent. Choose from three difficulty levels and test your tactical skills!</p>
+                            <div class="game-features">
+                                <span class="feature"><i class="fas fa-robot"></i> AI Opponent</span>
+                                <span class="feature"><i class="fas fa-cog"></i> Multiple Difficulties</span>
+                                <span class="feature"><i class="fas fa-trophy"></i> Smart AI</span>
+                            </div>
+                        </div>
+                        <div class="game-card-footer">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                                Play Now
+                            </button>
+                            <div class="game-stats">
+                                <span><i class="fas fa-star"></i> 4.7/5</span>
+                                <span><i class="fas fa-users"></i> 1.8k plays</span>
+                            </div>
+                        </div>
+                        <div class="game-card-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Click to Play</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Battleship Game Card -->
+                    <div class="game-card" onclick="navigateToGame('battleship')">
+                        <div class="game-card-header">
+                            <div class="game-icon">
+                                <i class="fas fa-ship"></i>
+                            </div>
+                            <div class="game-badge">Strategy</div>
+                        </div>
+                        <div class="game-card-content">
+                            <h3 class="game-title">Battleship</h3>
+                            <p class="game-description">Naval warfare at its finest! Place your fleet strategically and sink the enemy ships before they sink yours.</p>
+                            <div class="game-features">
+                                <span class="feature"><i class="fas fa-ship"></i> Fleet Management</span>
+                                <span class="feature"><i class="fas fa-crosshairs"></i> Strategic Combat</span>
+                                <span class="feature"><i class="fas fa-robot"></i> Smart AI</span>
+                            </div>
+                        </div>
+                        <div class="game-card-footer">
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                                Play Now
+                            </button>
+                            <div class="game-stats">
+                                <span><i class="fas fa-star"></i> 4.9/5</span>
+                                <span><i class="fas fa-users"></i> 2.3k plays</span>
+                            </div>
+                        </div>
+                        <div class="game-card-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Click to Play</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Quick Stats -->
+            <div class="stats-section">
+                                    <div class="stat-card">
+                        <i class="fas fa-gamepad"></i>
+                        <div class="stat-info">
+                            <h4>Total Games</h4>
+                            <span>4</span>
+                        </div>
+                    </div>
+                <div class="stat-card">
+                    <i class="fas fa-clock"></i>
+                    <div class="stat-info">
+                        <h4>Play Time</h4>
+                        <span>∞</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-trophy"></i>
+                    <div class="stat-info">
+                        <h4>Achievements</h4>
+                        <span>10+</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>PlayStation Hub</h4>
+                    <p>Your ultimate gaming destination</p>
+                </div>
+                                    <div class="footer-section">
+                        <h4>Games</h4>
+                        <ul>
+                            <li><a href="#" onclick="navigateToGame('simon')">Simon Game</a></li>
+                            <li><a href="#" onclick="navigateToGame('rps')">Rock Paper Scissors</a></li>
+                            <li><a href="#" onclick="navigateToGame('tictactoe')">Tic Tac Toe</a></li>
+                            <li><a href="#" onclick="navigateToGame('battleship')">Battleship</a></li>
+                        </ul>
+                    </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PlayStation Hub. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h3>Loading Game...</h3>
+            <p>Preparing your gaming experience</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

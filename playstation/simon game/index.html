@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Back to Dashboard Button -->
+    <div class="back-to-dashboard">
+        <button class="dashboard-btn" onclick="window.location.href='../index.html'">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Dashboard</span>
+        </button>
+    </div>
+
+    <div class="game-container">
+        <header class="game-header">
+            <h1 class="game-title">🎮 SIMON GAME</h1>
+            <div class="game-controls">
+                <button class="start-btn" id="startBtn">START GAME</button>
+                <button class="restart-btn" id="restartBtn" style="display: none;">RESTART</button>
+            </div>
+            <div class="game-info">
+                <div class="level-display">
+                    <span class="level-label">LEVEL</span>
+                    <span class="level-number" id="levelNumber">0</span>
+                </div>
+                <div class="score-display">
+                    <span class="score-label">SCORE</span>
+                    <span class="score-number" id="scoreNumber">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-board">
+            <div class="simon-container">
+                <div class="simon-circle">
+                    <div class="simon-button btn1" id="btn1" data-color="red">
+                        <div class="button-inner"></div>
+                    </div>
+                    <div class="simon-button btn2" id="btn2" data-color="yellow">
+                        <div class="button-inner"></div>
+                    </div>
+                    <div class="simon-button btn3" id="btn3" data-color="blue">
+                        <div class="button-inner"></div>
+                    </div>
+                    <div class="simon-button btn4" id="btn4" data-color="green">
+                        <div class="button-inner"></div>
+                    </div>
+                </div>
+                <div class="center-display">
+                    <div class="center-logo">SIMON</div>
+                    <div class="game-status" id="gameStatus">Press START to begin!</div>
+                </div>
+            </div>
+        </main>
+
+        <div class="game-instructions">
+            <h3>How to Play:</h3>
+            <ul>
+                <li>Watch the pattern sequence carefully</li>
+                <li>Repeat the pattern by clicking the buttons in the same order</li>
+                <li>Each level adds one more step to the sequence</li>
+                <li>Get to level 20 to win!</li>
+            </ul>
+            
+            <div class="controls-guide">
+                <h4>Controls & Buttons:</h4>
+                <div class="control-item">
+                    <span class="control-name">START GAME</span>
+                    <span class="control-desc">Begins the game and starts the first sequence</span>
+                </div>
+                <div class="control-item">
+                    <span class="control-name">RESTART</span>
+                    <span class="control-desc">Resets the game to level 1 and clears all progress</span>
+                </div>
+                <div class="control-item">
+                    <span class="control-name">Simon Buttons (Red, Yellow, Blue, Green)</span>
+                    <span class="control-desc">Click these to repeat the pattern sequence</span>
+                </div>
+            </div>
+            
+            <div class="game-tips">
+                <h4>Tips for Success:</h4>
+                <ul>
+                    <li>Focus on the visual pattern and sound cues</li>
+                    <li>Take your time - there's no rush to respond</li>
+                    <li>Use the sound effects to help remember the sequence</li>
+                    <li>Practice regularly to improve your memory skills</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Over Overlay -->
+    <div class="game-overlay" id="gameOverlay">
+        <div class="game-overlay-content"> 
+            <h2 id="overlayTitle">Game Over!</h2>
+            <p id="overlayMessage">Better luck next time!</p>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-value" id="finalLevel">0</span>
+                    <span class="stat-label">Level Reached</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value" id="finalScore">0</span>
+                    <span class="stat-label">Final Score</span>
+                </div>
+            </div>
+            <button class="restart-btn" onclick="document.getElementById('gameOverlay').classList.remove('show')">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Audio elements for sound effects -->
+    <audio id="redSound" preload="auto"></audio>
+    <audio id="yellowSound" preload="auto"></audio>
+    <audio id="blueSound" preload="auto"></audio>
+    <audio id="greenSound" preload="auto"></audio>
+    <audio id="errorSound" preload="auto"></audio>
+    <audio id="successSound" preload="auto"></audio>
+    <audio id="levelUpSound" preload="auto"></audio>
+    <audio id="gameOverSound" preload="auto"></audio>
+    <audio id="victorySound" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
