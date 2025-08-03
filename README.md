@@ -331,13 +331,7 @@ We welcome contributions to make PlayStation Hub even better!
 5. **📚 Documentation**: Improve documentation
 
 
-```
 
----
-
-
-
----
 
 ## 🙏 **Acknowledgments**
 
@@ -347,20 +341,13 @@ We welcome contributions to make PlayStation Hub even better!
 - **🔊 Audio Design**: Web Audio API community
 - **📱 Mobile Gaming**: Mobile-first design principles
 
----
 
-
-
----
 
 <div align="center">
 
 
 
----
-
 *Made with ❤️ for gamers everywhere*
 
-![PlayStation Hub](https://img.shields.io/badge/PlayStation-Hub-00d4ff?style=for-the-badge&logo=playstation&logoColor=white)
 
 </div> 
